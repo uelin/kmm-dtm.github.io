@@ -1,3 +1,29 @@
+/* フォント指定 */
+body {
+  /* 「BIZ UDPゴシック」をWindowsで指定 */
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "BIZ UDPGothic",
+    Meiryo,
+    sans-serif;
+    background-color: #FFF;
+}
+.header {
+    width: 100vw;
+    height: 10vh;
+    background-image: linear-gradient(to bottom right, rgb(159, 193, 209) 0%, rgb(21, 96, 130) 100%);
+}
+main {
+    width: 600px;
+}
 p {
     color: red;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    background-image: linear-gradient(to bottom right, rgb(159, 193, 209) 0%, rgb(21, 96, 130) 100%);
 }
