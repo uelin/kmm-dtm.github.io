@@ -10,37 +10,65 @@
     <div class="landing">
       <img src="logo.png" alt="Logo" class="landing-logo">
     </div>
+
+    <!--ヘッダー-->
     <div class="header">
       <img src="logo.png" alt="Logo" class="logo">
       <nav class="menubar">
         <a href="#about" class="menu">About</a>
-        <a href="#news" class="menu">News</a>
-        <a href="#discography" class="menu">Discography</a>
+        <a href="news.html" class="menu">News</a>
+        <a href="discography.html" class="menu">Discography</a>
         <a href="https://kmmkeio.booth.pm/" class="menu">Shop</a>
-        <a href="#forstudents" class="menu">For Students</a>
+        <a href="forstudents.html" class="menu">For Students</a>
         <a href="#contact" class="menu">Contact</a>
       </nav>
-      
     </div>
     
+    <!--本文-->
     <main>
+      <h1>楽曲政策会KMM</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium,
         illum repellat? Enim eius, atque sapiente cumque fugit assumenda
         reprehenderit itaque, quam natus voluptatibus optio ratione inventore
         molestias dolorum laudantium quasi.
       </p>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          慶応義塾大学の作曲サークルです。<br>
+          2016年設立、2020年に大学公認サークルとなりました。<br>
+        </p>
+      </section>
+      
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          メールアドレス<br>
+          ツイッター（X）@kmm_dtm
+        </p>
+      </section>
+
     </main>
     
+    <!--フッター-->
     <div class="header">
       <img src="logo.png" style="max-width: 100px; margin:auto 10px;"; alt="Logo" class="logo">
     </div>
 
+    <!--ランディングページが消える用のjs-->
     <script>
       window.onload = function() {
+        const landing = document.querySelector('.landing');
         setTimeout(function() {
           document.querySelector('.landing').classList.add('fade-out');
-        }, 1500); // 3秒後にフェードアウトを開始
+        }, 1500);
+      landing.addEventListener('animationend', function() {
+        if (landing.classList.contains('fade-out')) {
+        landing.style.display = 'none';  // 完全に非表示にする
+        }
+      });
       };
     </script>
   </body>
