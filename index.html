@@ -7,6 +7,9 @@
     <title>楽曲制作会KMM</title>
   </head>
   <body>
+    <div class="landing">
+      <img src="logo.png" alt="Logo" class="landing-logo">
+    </div>
     <div class="header">
       <img src="logo.png" alt="Logo" class="logo">
       <nav class="menubar">
@@ -32,5 +35,13 @@
     <div class="header">
       <img src="logo.png" style="max-width: 100px; margin:auto 10px;"; alt="Logo" class="logo">
     </div>
+
+    <script>
+      window.onload = function() {
+        setTimeout(function() {
+          document.querySelector('.landing').classList.add('fade-out');
+        }, 1500); // 3秒後にフェードアウトを開始
+      };
+    </script>
   </body>
 </html>

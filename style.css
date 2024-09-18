@@ -22,6 +22,36 @@ body {
     background-image: linear-gradient(to bottom right, rgb(159, 193, 209) 0%, rgb(21, 96, 130) 100%);
 }
 
+  /* landingアニメーション */
+  .landing {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(109, 135, 145) 0%, rgb(159, 193, 209) 50%, rgb(21, 96, 130) 100%); /* 背景色を設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* ロゴが最前面にくるように */
+  }
+  .landing-logo {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+    max-width: 400px;
+  }
+  .landing.fade-out {
+    animation: fadeOut 2s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* ロゴが表示された後、少し時間が経ったら消える */
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
 .logo {
     max-width: 150px;
     object-fit: scale-down
