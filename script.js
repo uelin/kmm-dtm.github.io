@@ -1,6 +1,6 @@
 // スクロール時にヘッダーを表示・非表示にするコード
 let lastScrollTop = 0;
-const header = document.querySelector('.header');
+const header = document.querySelector('header');
 
 // ページが読み込まれた直後は必ずヘッダーを表示
 header.classList.remove('hide');
@@ -41,3 +41,12 @@ window.onload = function() {
     }
   });
 };
+
+function toggleMenu() {
+    const menubar = document.querySelector('.menu-dropdown');
+    if (menubar.style.display === 'block' || menubar.style.display === 'flex') {
+      menubar.style.display = 'none';
+    } else {
+      menubar.style.display = 'flex';
+    }
+  }
