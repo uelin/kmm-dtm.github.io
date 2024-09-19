@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
     <title>楽曲制作会KMM</title>
   </head>
   <body>
@@ -27,6 +28,7 @@
     <!--本文-->
     <main>
       <h1>楽曲制作会KMM</h1>
+      <p>こちらは、製作途中のウェブサイトです。</p>
       <section id="about">
         <h2>About</h2>
         <p>
@@ -54,20 +56,5 @@
     <div class="footer">
       <p>© 2024 楽曲制作会KMM</p>
     </div>
-
-    <!--ランディングページが消える用のjs-->
-    <script>
-      window.onload = function() {
-        const landing = document.querySelector('.landing');
-        setTimeout(function() {
-          document.querySelector('.landing').classList.add('fade-out');
-        }, 1500);
-      landing.addEventListener('animationend', function() {
-        if (landing.classList.contains('fade-out')) {
-        landing.style.display = 'none';  // 完全に非表示にする
-        }
-      });
-      };
-    </script>
   </body>
 </html>
